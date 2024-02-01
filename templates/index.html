@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Detection Web App</title>
+
+    <style>
+	body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+	.infotrixs{
+	display:flex;
+	margin-top:80px;
+   
+}	
+.infotrixs h2{
+    margin-top: -20px;
+    text-align: center;
+    color: black;
+    width: 127%;
+    padding: 10px;
+    margin-left: -17%;
+    margin-top: -17%;
+    border-bottom: 2px solid black;
+    border-radius: 5px;
+    transition: background-color 1s ease,color 1s ease;
+}
+.infotrixs h2:hover{
+    background-color: darkslategray;
+    color: white;
+}
+.infotrixs .data{
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 50px;
+    margin-left: 20px;
+    transition: background-color 1s ease,border 1s ease;
+}
+
+
+	body h1{margin-top:-40px}
+	
+	body { 
+	    
+            overflow-y: hidden;
+            overflow-x: hidden; 
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        button{
+            width: 200px;
+            margin-left: 20px;
+            background-color: darkslategray;
+            color: white;
+            height: 40px;
+            border-radius: 5px;
+            transition: background-color 1s ease;
+        }
+        button:hover{
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+     
+        button .btn{
+            border-radius: 5px;
+            
+        }
+       
+        img {
+            max-width: 100%;
+          border-radius: 10px;
+	    width: 300px;
+        }
+        .heading{
+           width: 100%;
+           text-align: center;
+           border: 1px solid black;
+           margin-top: -10%;
+           border-radius: 15px;
+           padding: 20px;          
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">Object Detection Web App</h1>
+    <form method="post" action="/" enctype="multipart/form-data">
+        <button><input class="btn" type="file" name="file" accept=".jpg, .jpeg, .png"></button>
+        <button><input class="btn" type="submit" value="Detect Objects"></button>
+    </form>
+<div class="infotrixs">
+   
+        <div class="data">
+            {% if image_path %}
+            <h2>Uploaded Image</h2>
+            <img src="{{ image_path }}" alt="Uploaded Image" width="400">
+            {% endif %}
+        </div>
+   
+       <div class="data">
+        {% if result_image_path %}
+           <h2>Result Image</h2>
+           <img src="{{ result_image_path}}" alt="Result Image" width="400">
+           {% endif %}
+        </div>
+ 
+</div>
+</body>
+</html>
