@@ -16,6 +16,7 @@ The program is designed to recognize objects in images and perform object detect
 - Libraries: OpenCV,Flask ( for Frontend)
 
 ## Frontend Webpage
+![image](https://github.com/yerram-karthik/OBJECT-DETECTION/assets/136573431/19f91730-5c19-402b-aa22-87836e5f88f9)
 
 
 
