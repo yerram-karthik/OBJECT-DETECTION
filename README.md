@@ -1,6 +1,6 @@
 # OBJECT_DETECTION
 
-# Object Detection Using OpenCV and Machine Learning 
+# Object Detection Using OpenCV and DNN 
 
 ## Overview
 The program is designed to recognize objects in images and perform object detection tasks using Python libraries like OpenCV. It utilizes pre-trained models or allows users to train their own models with labeled datasets.
